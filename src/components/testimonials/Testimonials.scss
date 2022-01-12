@@ -1,0 +1,145 @@
+@import '../../global.scss';
+
+.testimonials{
+    background-color: #8b23cd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mobile{
+        justify-content: space-around;
+    }
+
+    h1{
+        font-size: 50px;
+        overflow: hidden;
+
+        @include mobile{
+            font-size: 30px;
+        }
+    }
+
+    .container{
+        width: 100%;
+        height: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include mobile{
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .card{
+            width: 250px;
+            height: 70%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px -8px black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            margin: 0px 10px;
+            padding: 20px;
+            transition: all .1s ease;
+
+            @include mobile{
+                height: 200px;
+                margin: 1px 10px;
+            }
+
+            &.featured{
+                width: 270px;
+                height: 75%;
+
+                @include mobile{
+                    width: 250px;
+                    height: 180px;
+                    margin: 1px;
+                }
+            }
+
+            &:hover{
+                transform: scale(1.1);
+            }
+
+            .top{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .left, .right{
+                    height: 25px;
+                    width: 25px;
+
+                    &:hover{
+                        cursor: pointer;
+                        transform: scale(1.5);
+                        color: #fff;
+                    }
+
+                    @include mobile{
+                        height: 15px;
+                        width: 20px;
+                        &:hover{
+                            transform: none;
+                        }
+                    }
+                }
+
+                img{
+                    
+                    &.user{
+                        height: 60px;
+                        width: 60px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        margin: 0 30px;
+
+                        @include mobile{
+                            height: 25px;
+                            width: 25px;
+                        }
+                    }
+                }
+            }
+
+            .center{
+                padding: 10px;
+                background: rgb(151, 117, 170);
+                border-radius: 10px;
+                overflow: hidden;
+
+                @include mobile{
+                    font-size: 12px;
+                    padding: 5px;
+                }
+            }
+
+            .bottom{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+
+                h3{
+                    
+                    @include mobile{
+                        font-size: 12px;
+                    }
+                }
+
+                h4{
+                    color: rgb(27, 3, 8);
+
+                    @include mobile{
+                        margin-bottom: 5px;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
